@@ -19,6 +19,7 @@ func (t *tracer) Trace(a ...interface{}) {
 	fmt.Fprintln(t.out)
 }
 
+// New tracer writer
 func New(w io.Writer) Tracer {
 	return &tracer{out: w}
 }
